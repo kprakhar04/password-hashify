@@ -1,0 +1,39 @@
+body {
+	background: #636363;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #a2ab58, #636363);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #a2ab58, #636363); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+}
+#main {
+	margin: 1.5rem;
+	font-size: 2.5rem;
+}
+
+.btnComp {
+	background-color: #b68973 !important;
+	border-color: #b68973 !important;
+	color: #fff !important;
+}
+.btnComp:hover {
+	background-color: #1e212d !important;
+	border-color: #1e212d !important;
+}
+
+.copyBtn {
+	height:2rem;
+	cursor:pointer;
+}
+.copyBtn {
+	width: 10% !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

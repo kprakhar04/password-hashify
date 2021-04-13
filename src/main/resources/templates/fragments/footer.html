@@ -1,0 +1,38 @@
+<div class="footer text-center" th:fragment="footer">
+ 
+ <div class="row mt-5">
+ <div class="col-sm-2 offset-sm-3">
+<input type="checkbox" id="random" name="random" value="random"/>
+<label for="random">Random password</label>
+</div>
+<div class="col-sm-2">
+<input type="number" class="form-control mb-2 col-3" disabled min="1" max="256" id="randomPasswordLength" name="randomPasswordLength" placeholder="length"/>
+</div>
+<div class="col-sm-2">
+<button id="randomPasswordGenerator" class="btn btn-success col-sm-6 mt-2 btnComp" disabled>Generate</button>
+</div>
+</div>
+<p class="h3 mt-4">Random password result</p>
+<div class="row">
+<div class="col-sm-6 offset-sm-3">
+<input type="text" class="form-control mb-2 col-3" id="randomPasswordValue" readonly="readonly">
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Copy to clipboard" class="bi bi-clipboard copyBtn" viewBox="0 0 16 16" id="randomPasswordcpbtn" onClick='copyValue(1, "randomPasswordValue")'>
+  <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+  <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+</svg>
+</div>
+<br/>
+<p class="h3 mt-4">Password hash result</p>
+<div class="row">
+<div class="col-sm-6 offset-sm-3">
+<input type="text" class="form-control mb-2 col-3" id="hashValue" readonly="readonly" th:field="${password.hashedPassword}">
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Copy to clipboard" class="bi bi-clipboard copyBtn" viewBox="0 0 16 16" id="randomHashedPasswordcpbtn" onClick='copyValue(2, "hashValue")'>
+  <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+  <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+</svg>
+</div>
+  <script type="text/javascript" src="/js/index.js"></script>
+</div>

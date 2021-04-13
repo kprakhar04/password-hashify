@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: head"></head>
+<body>
+<div th:replace="fragments/nav :: navbar"></div>
+<div class="container">
+<div class="row justify-content-md-center mt-3">
+<div class="col-md-auto">
+<p class="h2">Generate SHA-384 Passwords</p>
+</div>
+</div>
+<div class="row mt-4">
+<form action="#" th:action="@{/hash/sha-384}"
+th:object="${password}" method="POST">
+<div class="form-group row">
+<div class="col-sm-6 offset-sm-3">
+<input type="text" required pattern=".*\S+.*" title="This field is required" class="form-control mb-2 col-4" name="plainText" id="plainText" th:name="plainText" th:value="${password.plainText}" placeholder='Raw password'/> 
+</div>
+</div>
+<button type="submit" class="btn btn-success col-sm-2 offset-5 mt-2 btnComp">Compute</button>
+</form>
+</div>
+<div th:replace="fragments/footer :: footer"></div>
+</div>
+</body>
+</html>
